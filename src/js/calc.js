@@ -11,15 +11,34 @@
     window.calc.sum = function sum(numbers) {
         let total = 0;
 
+
         if (!numbers) {
+            //numbers === typeof(numbers)  //will check if string, if true the auto continue
+            // var partsOfStr = str.split(''');  // will slit based on ''
+            //  split()   //will split
             return total;
         }
 
-        numbers.forEach(function addThem(num) {
-            total += num;
-        });
+        if (Array.isArray(numbers)===false) {
+            return NaN;
+        }
 
+        numbers.forEach(function addThem(num) {
+            total += Number(num);
+
+        });
+        return total;
     };
+
+    //    //I want to declair a string as a number and add if it is a number
+    // window.calc.sum = function sum( x = 0, y = 0) {
+    //       x = Number(x);
+    //       x >= 0 || x <0; x === NaN
+    //       y = Number(y);
+    //       return x + y;
+    // };
+
+
 
     /**
      * Returns the factorial for the given number which is defined as:
