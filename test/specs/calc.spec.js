@@ -27,8 +27,6 @@
           expect( result ).to.equal(0);
         });
 
-
-      describe(
         it('should be NaN if not a array', function(){
           let result = window.calc.sum('sdfgjhkgfds');
           expect( result ).to.be.NaN;
@@ -47,7 +45,7 @@
           let result = window.calc.sum(['foobar']);
           expect(result).to.be.NaN;
         });
-      );
+
 
     ////
     ////
@@ -86,7 +84,7 @@
         //   expect(result).to.equal(undefined);
         // });
 
-      describe(
+
         it('Nonintegers will return 0', function(){
           let result = window.calc.factorial(1.5);
           expect(result).to.equal(1);
@@ -105,7 +103,6 @@
           let result = window.calc.factorial( -3 );
           expect(result).to.equal(1);
         });
-      });
     });
 
 })();
